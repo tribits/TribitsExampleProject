@@ -23,7 +23,12 @@ You can then copy the configure file as:
 
 After that set, configure with:
 
-  ./do-configure -DTribitsExProj_ENABLE_ALL_PACKAGES=ON
+  cmake -D \
+    -DTribitsExProj_TRIBITS_DIR=<tribits-dir> \
+    -DTribitsExProj_ENABLE_TESTS=ON \
+    -DTribitsExProj_ENABLE_ALL_PACKAGES=ON
+    -DCMAKE_CXX_COMPILER=g++ \
+    ../../examples/TribitsExampleProject
 
 and then build and test with:
 
